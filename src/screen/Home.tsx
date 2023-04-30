@@ -3,6 +3,8 @@ import WebView from "react-native-webview";
 import { BackHandler } from "react-native";
 import { WebViewNativeEvent } from "react-native-webview/lib/WebViewTypes";
 import { StatusBar } from "expo-status-bar";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 const Home = () => {
   const ref = useRef<WebView>(null);
   const [navState, setNavState] = useState<WebViewNativeEvent>();
@@ -28,13 +30,14 @@ const Home = () => {
 
   return (
     <>
-      <StatusBar style="auto" />
-      <WebView
-        style={{ marginTop: 25 }}
-        source={{ uri: "https://dosuri.site" }}
-        ref={ref}
-        onNavigationStateChange={(e) => setNavState(e)}
-      />
+      <StatusBar style="dark" backgroundColor="#fff" />
+      <SafeAreaView style={{ flex: 1 }}>
+        <WebView
+          source={{ uri: "https://dosuri.site" }}
+          ref={ref}
+          onNavigationStateChange={(e) => setNavState(e)}
+        />
+      </SafeAreaView>
     </>
   );
 };

@@ -1,16 +1,14 @@
 {
   "expo": {
-    "name": "dosuri-app",
+    "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sdkVersion": "48.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android"],
+    "icon": "./assets/icon.png",
     "android": {
-      "package": "com.ytw418.dosuriapp"
+      "package": "com.ytw418.dosuriapp",
+      "versionCode": 2
     },
     "splash": {
       "image": "./assets/splash.png",
@@ -21,6 +19,9 @@
       "eas": {
         "projectId": "e517c7c4-acd4-4611-922e-61f9e6c7f6c9"
       }
+    },
+    "ios": {
+      "bundleIdentifier": "com.ytw418.dosuriapp"
     }
   }
 }
