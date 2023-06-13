@@ -8,7 +8,7 @@
     "icon": "./assets/icon.png",
     "android": {
       "package": "com.ytw418.dosuriapp",
-      "versionCode": 2
+      "versionCode": 3
     },
     "splash": {
       "image": "./assets/splash.png",
