@@ -5,6 +5,7 @@ import { WebViewNativeEvent } from "react-native-webview/lib/WebViewTypes";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
+import { Platform } from "react-native";
 const Home = () => {
   const ref = useRef<WebView>(null);
   const [navState, setNavState] = useState<WebViewNativeEvent>();
@@ -35,37 +36,28 @@ const Home = () => {
     //https://reactnative.dev/docs/panresponder 참고
     onStartShouldSetPanResponder: () => true,
     onPanResponderEnd: (_, gestureState) => {
-      if (gestureState.dx > 150) {
+      if (Platform.OS === "ios" && gestureState.dx > 150) {
         // 오른쪽으로 스와이프하여 이전 페이지로 이동
         ref.current.goBack();
       }
     },
   });
 
-  const [location, setLocation] = useState(null);
-  const [errorMsg, setErrorMsg] = useState(null);
-
   useEffect(() => {
     (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== "granted") {
-        setErrorMsg("Permission to access location was denied");
-        return;
-      }
-
-      let location = await Location.getCurrentPositionAsync({});
-      setLocation(location);
+      const location = await Location.requestForegroundPermissionsAsync();
+      console.log("location :>> ", location);
     })();
   }, []);
 
-  let text = "Waiting..";
-  if (errorMsg) {
-    text = errorMsg;
-  } else if (location) {
-    text = JSON.stringify(location);
-  }
-
-  console.log("text :>> ", text);
+  /** 웹뷰 통신받기 */
+  const onMessage = (e) => {
+    // const data = e.nativeEvent.data; // 위치 정보
+    // Alert.alert(data); // RN은 Alert객체가 따로 있어서 'Alert.alert()' 사용
+    (async () => {
+      await Location.requestForegroundPermissionsAsync();
+    })();
+  };
 
   return (
     <>
@@ -74,6 +66,7 @@ const Home = () => {
         <WebView
           source={{ uri: "https://dosuri.site" }}
           ref={ref}
+          onMessage={onMessage}
           onNavigationStateChange={(e) => setNavState(e)}
           {...panResponder.panHandlers}
         />
