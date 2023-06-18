@@ -27,7 +27,9 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?"
+          "locationAlwaysAndWhenInUsePermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?",
+          "locationAlwaysPermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?",
+          "locationWhenInUsePermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?"
         }
       ]
     ]
