@@ -2,7 +2,7 @@
   "expo": {
     "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sdkVersion": "48.0.0",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
@@ -24,6 +24,9 @@
       "bundleIdentifier": "com.ytw418.dosuriapp",
       "entitlements": {
         "com.apple.developer.applesignin": ["Default"]
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses location to get hospital information for user`s location."
       }
     },
     "plugins": [

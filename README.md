@@ -1,6 +1,6 @@
 ```
 $ npm install
-$ expo start
+$ expo start or npm start
 ```
 
 //IOS 빌드
