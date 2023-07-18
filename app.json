@@ -2,13 +2,13 @@
   "expo": {
     "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "sdkVersion": "48.0.0",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
     "android": {
       "package": "com.ytw418.dosuriapp",
-      "versionCode": 3
+      "versionCode": 4
     },
     "splash": {
       "image": "./assets/splash.png",
@@ -21,15 +21,21 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.ytw418.dosuriapp"
+      "bundleIdentifier": "com.ytw418.dosuriapp",
+      "entitlements": {
+        "com.apple.developer.applesignin": ["Default"]
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "사용자 근처 병원을 확인하기 위해 위치 권한 허용이 필요합니다."
+      }
     },
     "plugins": [
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?",
-          "locationAlwaysPermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?",
-          "locationWhenInUsePermission": "도수리 앱의 위치 정보 사용을 허용하시겠습니까?"
+          "locationAlwaysAndWhenInUsePermission": "위치서비스를 허용하시면 내 근처 병원을 확인할 수 있어요.",
+          "locationAlwaysPermission": "위치서비스를 허용하시면 내 근처 병원을 확인할 수 있어요.",
+          "locationWhenInUsePermission": "위치서비스를 허용하시면 내 근처 병원을 확인할 수 있어요."
         }
       ]
     ]

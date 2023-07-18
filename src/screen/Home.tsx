@@ -9,7 +9,8 @@ import { Platform } from "react-native";
 const Home = () => {
   const ref = useRef<WebView>(null);
   const [navState, setNavState] = useState<WebViewNativeEvent>();
-
+  const DOMAIN_URL_DEV = "http://172.20.10.12:3000"; // 와이파이 IP 주소 + 웹 프로젝트를 실행 시킨 로컬 호스트 포트
+  const DOMAIN_URL_PRO = "https://dosuri.site/appMiddleware";
   /** Android 뒤로가기 버튼 기능 */
   useEffect(() => {
     const canGoBack = navState?.canGoBack;
@@ -48,6 +49,7 @@ const Home = () => {
       const location = await Location.requestForegroundPermissionsAsync();
       console.log("location :>> ", location);
     })();
+    // ref.current.postMessage("웹뷰");
   }, []);
 
   /** 웹뷰 통신받기 */
@@ -64,7 +66,7 @@ const Home = () => {
       <StatusBar style="dark" backgroundColor="#fff" />
       <SafeAreaView style={{ flex: 1 }}>
         <WebView
-          source={{ uri: "https://dosuri.site" }}
+          source={{ uri: DOMAIN_URL_PRO }}
           ref={ref}
           onMessage={onMessage}
           onNavigationStateChange={(e) => setNavState(e)}
