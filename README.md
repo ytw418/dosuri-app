@@ -1,6 +1,6 @@
 ```
 $ npm install
-$ expo start or npm start
+$ npx expo start
 ```
 
 all
