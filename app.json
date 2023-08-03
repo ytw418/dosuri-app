@@ -2,7 +2,7 @@
   "expo": {
     "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "sdkVersion": "48.0.0",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
@@ -36,6 +36,12 @@
           "locationAlwaysAndWhenInUsePermission": "위치서비스를 허용하시면 내 근처 병원을 확인할 수 있어요.",
           "locationAlwaysPermission": "위치서비스를 허용하시면 내 근처 병원을 확인할 수 있어요.",
           "locationWhenInUsePermission": "위치서비스를 허용하시면 내 근처 병원을 확인할 수 있어요."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "카메라 권한을 허용하시면 후기를 작성할 수 있어요"
         }
       ]
     ]

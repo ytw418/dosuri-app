@@ -3,6 +3,12 @@ $ npm install
 $ npx expo start
 ```
 
+// eas build
+// https://docs.expo.dev/eas-update/getting-started/
+// https://stackoverflow.com/questions/72874829/i-am-trying-to-install-eas-cli-and-am-getting-the-error-zsh-command-not-found
+$ sudo npm install --global eas-cli
+$ eas login
+
 all
 $ eas build --platform all
 
