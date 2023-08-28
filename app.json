@@ -43,6 +43,19 @@
         {
           "cameraPermission": "카메라 권한을 허용하시면 후기를 작성할 수 있어요"
         }
+      ],
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "1003470297422509",
+          "clientToken": "49ba8908d998776998204fa1c47bc8c5",
+          "displayName": "도수리",
+          "scheme": "fb1003470297422509",
+          "advertiserIDCollectionEnabled": false,
+          "autoLogAppEventsEnabled": false,
+          "isAutoInitEnabled": true,
+          "iosUserTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+        }
       ]
     ]
   }
