@@ -2,13 +2,13 @@
   "expo": {
     "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "sdkVersion": "48.0.0",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
     "android": {
       "package": "com.ytw418.dosuriapp",
-      "versionCode": 7
+      "versionCode": 8
     },
     "splash": {
       "image": "./assets/splash.png",
@@ -51,11 +51,11 @@
           "clientToken": "49ba8908d998776998204fa1c47bc8c5",
           "displayName": "도수리",
           "scheme": "fb1003470297422509",
-          "advertiserIDCollectionEnabled": false, // 광고 식별자를 수집할지 여부를 제어하는 것으로 보입니다. 이 설정을 끄면 귀하의 앱은 광고 목적으로 사용자를 추적하지 않을 것입니다.
-          "autoLogAppEventsEnabled": false, // 사용자 상호작용과 같은 이벤트를 자동으로 로깅할지 여부를 결정할 것입니다. 이는 분석 목적으로 사용됩니다
-          "isAutoInitEnabled": true // 앱이 시작될 때 SDK가 자동으로 초기화되는지 여부를 제어하는 것으로 보입니다.
-          // "iosUserTrackingPermission": "This identifier will be used to deliver personalized ads to you." 이것은 앱이 사용자 추적 권한을 요청하는 이유에 대한 사용자를 위한 메시지로 보입니다. 사용자에게 데이터 수집에 대한 명확하고 투명한 설명을 제공하는 것이 중요합니다.
-          // 인앱에서 광고를 하지 않음으로 주석처리
+          "advertiserIDCollectionEnabled": true, // 광고 식별자를 수집할지 여부를 제어하는 것으로 보입니다. 이 설정을 끄면 귀하의 앱은 광고 목적으로 사용자를 추적하지 않을 것입니다.
+          "autoLogAppEventsEnabled": true, // 사용자 상호작용과 같은 이벤트를 자동으로 로깅할지 여부를 결정할 것입니다. 이는 분석 목적으로 사용됩니다
+          "isAutoInitEnabled": true, // 앱이 시작될 때 SDK가 자동으로 초기화되는지 여부를 제어하는 것으로 보입니다.
+          "iosUserTrackingPermission": "맞춤 병원 추천을 위한 사용자 정보 수집 권한을 허용해주세요."
+          // 인앱에서 광고를 하지 않음으로 주석처리 이것은 앱이 사용자 추적 권한을 요청하는 이유에 대한 사용자를 위한 메시지로 보입니다. 사용자에게 데이터 수집에 대한 명확하고 투명한 설명을 제공하는 것이 중요합니다.
         }
       ]
     ]
