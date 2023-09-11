@@ -6,6 +6,10 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { Platform } from "react-native";
+import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
+
+import { Settings } from "react-native-fbsdk-next";
+
 const Home = () => {
   const ref = useRef<WebView>(null);
   const [navState, setNavState] = useState<WebViewNativeEvent>();
@@ -46,8 +50,16 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
+      // 위치정보
       const location = await Location.requestForegroundPermissionsAsync();
       console.log("location :>> ", location);
+
+      // 사용자 이벤트
+      const { status } = await requestTrackingPermissionsAsync();
+      Settings.initializeSDK();
+      if (status === "granted") {
+        await Settings.setAdvertiserTrackingEnabled(true);
+      }
     })();
     // ref.current.postMessage("웹뷰");
   }, []);
