@@ -2,7 +2,7 @@
   "expo": {
     "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "sdkVersion": "48.0.0",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
@@ -27,8 +27,8 @@
       },
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "사용자 근처 병원을 확인하기 위해 위치 권한 허용이 필요합니다.",
-        "NSUserTrackingUsageDescription": "맞춤 병원 추천을 위한 사용자 정보 수집 권한을 허용해주세요1.",
-        "iosUserTrackingPermission": "맞춤 병원 추천을 위한 사용자 정보 수집 권한을 허용해주세요2."
+        "NSUserTrackingUsageDescription": "맞춤 병원 추천을 위한 사용자 정보 수집 권한을 허용해주세요.",
+        "iosUserTrackingPermission": "맞춤 병원 추천을 위한 사용자 정보 수집 권한을 허용해주세요."
       }
     },
     "plugins": [
