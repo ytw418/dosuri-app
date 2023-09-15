@@ -53,15 +53,20 @@ const Home = () => {
       // 위치정보
       const location = await Location.requestForegroundPermissionsAsync();
       console.log("location :>> ", location);
+    })();
+    // ref.current.postMessage("웹뷰");
+  }, []);
 
+  useEffect(() => {
+    (async () => {
       // 사용자 이벤트
       const { status } = await requestTrackingPermissionsAsync();
+      console.log("status :>> ", status);
       Settings.initializeSDK();
       if (status === "granted") {
         await Settings.setAdvertiserTrackingEnabled(true);
       }
     })();
-    // ref.current.postMessage("웹뷰");
   }, []);
 
   /** 웹뷰 통신받기 */
