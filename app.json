@@ -2,13 +2,13 @@
   "expo": {
     "name": "도수리",
     "slug": "dosuri-app",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "sdkVersion": "48.0.0",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
     "android": {
       "package": "com.ytw418.dosuriapp",
-      "versionCode": 9
+      "versionCode": 10
     },
     "splash": {
       "image": "./assets/splash.png",
